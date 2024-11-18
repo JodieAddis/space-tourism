@@ -1,5 +1,8 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import DestinationContainer from "../components/DestinationContainer.astro"
+
+const allPosts = await Astro.glob('./posts/destination/*.md'); 
 ---
 
 <html lang="en">
@@ -12,7 +15,19 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 	</head>
 	<body>
 		<BaseLayout>
-            <h2>DESINTATION</h2>
+			{
+			allPosts.map((post) =>
+				<DestinationContainer
+				planet={post.frontmatter.planet}
+				text={post.frontmatter.description}
+				destText={post.frontmatter.distanceText}
+				destNum={post.frontmatter.distanceNum}
+				timeText={post.frontmatter.timeText}
+				timeNum={post.frontmatter.timeNum}
+				/>
+			)
+			}
+			
 		</BaseLayout>
 	</body>
 </html>

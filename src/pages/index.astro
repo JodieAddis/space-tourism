@@ -1,5 +1,8 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+const home = await Astro.glob('./posts/home.md'); 
+const homePost = home[0]; 
+
 ---
 
 <html lang="en">
@@ -12,7 +15,9 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 	</head>
 	<body>
 		<BaseLayout>
-		<h2>HOME</h2>
+		<h1>so, you want to travel to</h1>
+		<h2>space</h2>
+		<p>{homePost.frontmatter.description}</p>
 		</BaseLayout>
 	</body>
 </html>
