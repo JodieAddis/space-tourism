@@ -4,30 +4,18 @@ import DestinationContainer from "../components/DestinationContainer.astro"
 
 const allPosts = await Astro.glob('./posts/destination/*.md'); 
 ---
-
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Space Tourism</title>
-	</head>
-	<body>
-		<BaseLayout>
-			{
-			allPosts.map((post) =>
-				<DestinationContainer
-				planet={post.frontmatter.planet}
-				text={post.frontmatter.description}
-				destText={post.frontmatter.distanceText}
-				destNum={post.frontmatter.distanceNum}
-				timeText={post.frontmatter.timeText}
-				timeNum={post.frontmatter.timeNum}
-				/>
-			)
-			}
-			
-		</BaseLayout>
-	</body>
-</html>
+<BaseLayout>
+	{
+	allPosts.map((post) =>
+		<DestinationContainer
+		planet={post.frontmatter.planet}
+		text={post.frontmatter.description}
+		destText={post.frontmatter.distanceText}
+		destNum={post.frontmatter.distanceNum}
+		timeText={post.frontmatter.timeText}
+		timeNum={post.frontmatter.timeNum}
+		/>
+	)
+	}
+	
+</BaseLayout>
