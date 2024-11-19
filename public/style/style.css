@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: Bellefair;
+  src: url("../fonts/Bellefair-Regular.ttf");
+}
+@font-face {
+  font-family: Barlow;
+  src: url("../fonts/Barlow-Regular.ttf");
+}
+
+@layer base {
+  body {
+    @apply bg-[url('../images/home/background-home-mobile.jpg')] bg-cover lg:bg-[url('../images/home/background-home-desktop.jpg')] text-white bg-no-repeat;
+  }
+}
+
+.nav-link {
+  @apply font-Barlow text-base my-5 lg:my-0 lg:mx-6;
+}

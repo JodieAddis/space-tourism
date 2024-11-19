@@ -8,20 +8,20 @@ const {planet, text, destText, destNum, timeText, timeNum} = Astro.props;
 </section>
 <section>
     <div class="flex flex-row">
-        <TabDestination onViewSelect={planet} css='m-5' />
+        <TabDestination onViewSelect={planet} css='m-5 font-Barlow uppercase text-base' />
     </div>
-    <div>
-        <h2>{planet}</h2>
-        <p>{text}</p>
+    <div class="mx-5">
+        <h2 class="font-Bellefair uppercase text-6xl lg:text-9xl text-center lg:text-left">{planet}</h2>
+        <p class="text-Barlow text-lg text-center">{text}</p>
     </div>
     <div class="flex flex-row">
         <div>
-            <p>{destText}</p>
-            <p>{destNum}</p>
+            <p class="text-Barlow">{destText}</p>
+            <p class="text-Bellefair">{destNum}</p>
         </div>
         <div>
-            <p>{timeText}</p>
-            <p>{timeNum}</p>
+            <p class="text-Barlow">{timeText}</p>
+            <p class="text-Bellefair">{timeNum}</p>
         </div>
     </div>
 </section>
