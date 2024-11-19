@@ -1,17 +1,27 @@
 ---
+import TabDestination from './TabDesktop.tsx'
+
 const {planet, text, destText, destNum, timeText, timeNum} = Astro.props; 
 ---
-<div>
-    <h2>{planet}</h2>
-    <p>{text}</p>
-</div>
-<div>
-    <div>
-        <p>{destText}</p>
-        <p>{destNum}</p>
+<section>
+    <img src=`../../public/images/destination/image-${planet}.webp` alt=`Picture of the planet ${planet}`>
+</section>
+<section>
+    <div class="flex flex-row">
+        <TabDestination onViewSelect={planet} css='m-5' />
     </div>
     <div>
-        <p>{timeText}</p>
-        <p>{timeNum}</p>
+        <h2>{planet}</h2>
+        <p>{text}</p>
     </div>
-</div>
+    <div class="flex flex-row">
+        <div>
+            <p>{destText}</p>
+            <p>{destNum}</p>
+        </div>
+        <div>
+            <p>{timeText}</p>
+            <p>{timeNum}</p>
+        </div>
+    </div>
+</section>

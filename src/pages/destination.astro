@@ -7,7 +7,8 @@ const allPosts = await Astro.glob('./posts/destination/*.md');
 <BaseLayout>
 	{
 	allPosts.map((post) =>
-		<DestinationContainer
+	<div class="flex">
+	<DestinationContainer
 		planet={post.frontmatter.planet}
 		text={post.frontmatter.description}
 		destText={post.frontmatter.distanceText}
@@ -15,6 +16,7 @@ const allPosts = await Astro.glob('./posts/destination/*.md');
 		timeText={post.frontmatter.timeText}
 		timeNum={post.frontmatter.timeNum}
 		/>
+	</div>
 	)
 	}
 	
