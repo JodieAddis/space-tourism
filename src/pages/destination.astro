@@ -1,10 +1,23 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import DestinationContainer from "../components/DestinationContainer.astro"
+import TabDesktop from "../components/TabDesktop.tsx"
 
+//Récupération des informations dans les fichiers md: 
 const allPosts = await Astro.glob('./posts/destination/*.md'); 
+
+const planetData = allPosts.map((post) => post.frontmatter);
+
+// Importer React
+import { useState } from "react";
 ---
 <BaseLayout>
+	<div>
+		<TabDesktop
+			onViewSelect={(selectedPlanet) =>{}} 
+      		css="m-5"
+		/>
+	</div>
 	{
 	allPosts.map((post) =>
 	<div class="flex">

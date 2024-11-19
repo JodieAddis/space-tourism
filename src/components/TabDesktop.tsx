@@ -1,57 +1,6 @@
-// import { useState } from "react";
-// // import { ViewProps } from "../types/interface";
-// export interface ViewProps {
-//   onViewSelect: (view: string) => void;
-//   css: string;
-// }
-
-// const Component = ({ onViewSelect, css }: ViewProps) => {
-//   const tabs = ["moon", "mars", "europa", "titan"];
-//   const [selected, setSelectedTab] = useState(0);
-
-//   const handleClick = (image: string) => {
-//     let planetName = "";
-//     switch (image) {
-//       case "moon":
-//         planetName = "moon";
-//         break;
-//       case "mars":
-//         planetName = "mars";
-//         break;
-//       case "europa":
-//         planetName = "europa";
-//         break;
-//       case "titan":
-//         planetName = "titan";
-//         break;
-//     }
-//     onViewSelect(planetName);
-//     return planetName;
-//   };
-
-//   return (
-//     <>
-//       {tabs.map((tab, index) => (
-//         <div key={index}>
-//           <button
-//             className={css}
-//             onClick={() => {
-//               handleClick(tab);
-//               setSelectedTab(index);
-//             }}
-//           >
-//             {tab}
-//           </button>
-//         </div>
-//       ))}
-//     </>
-//   );
-// };
-
-// export default Component;
-
+import { set } from "astro/zod";
 import { useState } from "react";
-
+// import { ViewProps } from "../types/interface";
 export interface ViewProps {
   onViewSelect: (view: string) => void;
   css: string;
@@ -59,23 +8,24 @@ export interface ViewProps {
 
 const Component = ({ onViewSelect, css }: ViewProps) => {
   const tabs = ["moon", "mars", "europa", "titan"];
-  const [selected, setSelectedTab] = useState(0);
+  const [selected, setSelectedTab] = useState(0); //Etat local de l'onglet actif
 
   const handleClick = (tab: string, index: number) => {
-    setSelectedTab(index); // Mettre à jour l’onglet actif
-    onViewSelect(tab); // Notifier le parent du nouvel onglet sélectionné
+    setSelectedTab(index); //Mise à jour de l'état local
+    onViewSelect(tab); // Notifier le parent avec le nom de la planète
   };
 
   return (
     <>
       {tabs.map((tab, index) => (
-        <button
-          key={index}
-          className={`${css} ${index === selected ? "active-tab" : ""}`}
-          onClick={() => handleClick(tab, index)}
-        >
-          {tab}
-        </button>
+        <div key={index}>
+          <button
+            className={`${css} ${index === selected ? "active-tab" : ""}`}
+            onClick={() => handleClick(tab, index)}
+          >
+            {tab}
+          </button>
+        </div>
       ))}
     </>
   );
