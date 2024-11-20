@@ -1,6 +1,7 @@
 ---
-import Navigation from "../Navigation.astro";
 import Icons from "../Icons.astro";
+
+const pages = ["home", "destination", "crew", "technology"];
 ---
 
 <button 
@@ -8,40 +9,24 @@ import Icons from "../Icons.astro";
     id="hamburger-icon">
     <Icons icon="hamburger"/>
 </button>
-
-
 <nav class="justify-center hidden pr-20 pl-6 bg-lightGrey bg-opacity-5 backdrop-blur pt-32 h-screen w-2/3"
     id="mobile-navbar">
     <button 
     class="absolute top-0 right-0 z-50 cursor-pointer m-6" 
     id="close-icon">
-    <Icons icon="close"/>
-</button>
-    <Navigation />
+        <Icons icon="close"/>   
+    </button>
+    <div class="uppercase text-base flex flex-col lg:flex-row" id="nav-links">
+        {
+            pages.map((page, index) => (
+                <a href={`/${page}/`} class="nav-link-mobile">
+                    <span class="font-bold mr-2">0{index}</span>{page}
+                </a>
+            ))
+        }
+    </div>
 </nav>
 
 <script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const open = document.getElementById("hamburger-icon");
-        const close = document.getElementById("close-icon");
-        const menu = document.getElementById("mobile-navbar");
-
-        if (open) {
-            open.addEventListener("click", () => {
-                menu?.classList.toggle("hidden");
-                menu?.classList.toggle("flex");
-                open.classList.toggle("hidden"); 
-            });
-        } else {
-            console.error("Bouton ou menu introuvable.");
-        }
-
-        if(close){
-            close.addEventListener("click", () => {
-                menu?.classList.toggle("hidden");
-                open?.classList.toggle("hidden"); 
-                open?.classList.toggle("flex"); 
-            })
-        }
-    });
+    import "../../scripts/navbarMobile.ts"
 </script>

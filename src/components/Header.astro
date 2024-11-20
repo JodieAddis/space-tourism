@@ -1,17 +1,17 @@
 ---
-import Navigation from "./Navigation.astro"
-import NavbarMobile from "./navbar/NavbarMobile.astro"
 import Icons from "./Icons.astro"
+import NavbarMobile from "./navbar/NavbarMobile.astro"
+import NavbarDesktop from "./navbar/NavbarDesktop.astro"
 ---
 
 <header class="flex flex-row justify-between ">
     <div class="m-6 ">
         <Icons icon="logo"/>
     </div>
-    <nav class="justify-center pr-20 pl-6 pt-32 mt-5 px-32 bg-lightGrey bg-opacity-5 backdrop-blur hidden lg:block">
-        <Navigation />
-    </nav>
-        <NavbarMobile />
+    <NavbarMobile />
+    <div class="hidden lg:block">
+        <NavbarDesktop />
+    </div>
     
 </header>
 

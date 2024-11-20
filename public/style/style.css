@@ -12,11 +12,21 @@
 }
 
 @layer base {
+  html,
   body {
-    @apply bg-[url('../images/home/background-home-mobile.jpg')] lg:bg-[url('../images/home/background-home-desktop.jpg')] text-white bg-no-repeat;
+    @apply h-screen m-0 p-0 overflow-x-hidden;
+  }
+  body {
+    @apply bg-[url('../images/home/background-home-mobile.jpg')] lg:bg-[url('../images/home/background-home-desktop.jpg')] text-white bg-no-repeat bg-auto;
   }
 }
 
-.nav-link {
-  @apply font-Barlow text-base my-5 lg:my-0 lg:mx-6;
+.nav-link-mobile {
+  @apply font-Barlow text-base my-5;
+}
+.nav-link-desktop {
+  @apply font-Barlow text-base mx-6 py-10;
+}
+.nav-link-desktop.active {
+  @apply border-b-white border-b-4;
 }

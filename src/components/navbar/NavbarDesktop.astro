@@ -1,0 +1,18 @@
+---
+const pages = ["home", "destination", "crew", "technology"]; 
+---
+<nav class=" flex justify-center items-center mt-6 w-[830px]bg-lightGrey bg-opacity-5 backdrop-blur">
+    <div class="uppercase text-base flex flex-col lg:flex-row" id="nav-links">
+        {
+            pages.map((page, index) => (
+                <a href={`/${page}/`} class="nav-link-desktop">
+                    <span class="font-bold mr-2">0{index}</span>{page}
+                </a>
+            ))
+        }
+    </div>
+</nav>
+
+<script>
+import "../../scripts/navbarDesktop.ts"
+</script>
