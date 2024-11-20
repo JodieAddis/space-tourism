@@ -1,31 +1,17 @@
 ---
 import Navigation from "./Navigation.astro"
+import NavbarMobile from "./navbar/NavbarMobile.astro"
 import Icons from "./Icons.astro"
 ---
 
 <header class="flex flex-row justify-between ">
-    <div class="m-6">
+    <div class="m-6 ">
         <Icons icon="logo"/>
     </div>
-    <button class="cursor-pointer hidden" id="hamburger">
-        <Icons icon="hamburger"/>
-    </button>
-    <div class="m-6 flex flex-end">
-        <Icons icon="close" />
-    </div>
-    <nav class="flex flex-col justify-center pr-20 pl-6 pt-32 lg:pt-0 lg:mt-5 lg:px-32 bg-lightGrey bg-opacity-5 backdrop-blur">
+    <nav class="justify-center pr-20 pl-6 pt-32 mt-5 px-32 bg-lightGrey bg-opacity-5 backdrop-blur hidden lg:block">
         <Navigation />
     </nav>
+        <NavbarMobile />
+    
 </header>
 
-<script>
-import { literal } from "astro:schema";
-
-const hamburgerBtn = document.getElementById('hamburger'); 
-const link = document.getElementById("nav-links")
-hamburgerBtn?.addEventListener("click",() => {
-alert("le btn fonctionne");
-link?.classList.toggle("active")
-})
-
-</script>

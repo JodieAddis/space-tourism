@@ -13,7 +13,7 @@
 
 @layer base {
   body {
-    @apply bg-[url('../images/home/background-home-mobile.jpg')] bg-cover lg:bg-[url('../images/home/background-home-desktop.jpg')] text-white bg-no-repeat;
+    @apply bg-[url('../images/home/background-home-mobile.jpg')] lg:bg-[url('../images/home/background-home-desktop.jpg')] text-white bg-no-repeat;
   }
 }
 
