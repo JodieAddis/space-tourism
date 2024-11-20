@@ -3,25 +3,27 @@ import TabDestination from './TabDesktop.tsx'
 
 const {planet, text, destText, destNum, timeText, timeNum} = Astro.props; 
 ---
-<section>
-    <img src=`../../public/images/destination/image-${planet}.webp` alt=`Picture of the planet ${planet}`>
-</section>
-<section>
-    <div class="flex flex-row">
-        <TabDestination onViewSelect={planet} css='m-5 font-Barlow uppercase text-base' />
+    <div  class=" mt-16">
+        <h1 class="uppercase font-Barlow lg:text-[28px] text-center"><span class=" text-white text-opacity-25 font-bold  text-center mr-3">01</span>pick your destination</h1>
+        <img src=`../../public/images/destination/image-${planet}.webp` alt=`Picture of the planet ${planet}` class=" w-[170px] lg:w-[678px] lg:mt-24 mt-10">
     </div>
-    <div class="mx-5">
-        <h2 class="font-Bellefair uppercase text-6xl lg:text-9xl text-center lg:text-left">{planet}</h2>
-        <p class="text-Barlow text-lg text-center">{text}</p>
-    </div>
-    <div class="flex flex-row">
-        <div>
-            <p class="text-Barlow">{destText}</p>
-            <p class="text-Bellefair">{destNum}</p>
+    <div class="w-[445px] lg:mt-36">
+        <div class="flex flex-row justify-center mt-6 lg:mt-0">
+            <TabDestination onViewSelect={planet} css='m-5 font-Barlow uppercase text-base' />
         </div>
-        <div>
-            <p class="text-Barlow">{timeText}</p>
-            <p class="text-Bellefair">{timeNum}</p>
+        <div class="mx-5 lg:mx-0 lg:mt-6">
+            <h2 class="font-Bellefair uppercase text-6xl lg:text-[100px text-center lg:text-left">{planet}</h2>
+            <p class="text-Barlow text-lg text-center lg:text-left mt-4 lg:mt-6 mx-10 lg:mx-0">{text}</p>
+        </div>
+        <hr class="bg-white mt-8 lg:mt-10 mx-14"/>
+        <div class="flex flex-col items-center lg:flex-row mt-8 lg:mt-4">
+            <div class="text-center lg:text-left uppercase lg:mr-10">
+                <p class="font-Barlow text-sm">{destText}</p>
+                <p class="font-Bellefair text-3xl mt-3 lg:mt-1">{destNum}</p>
+            </div>
+            <div class="text-center lg:text-left uppercase mt-8 lg:mt-0">
+                <p class="font-Barlow text-sm">{timeText}</p>
+                <p class="font-Bellefair text-3xl mt-3 lg:mt-1">{timeNum}</p>
+            </div>
         </div>
     </div>
-</section>

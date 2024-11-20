@@ -5,11 +5,13 @@ import TabDesktop from "../components/TabDesktop.tsx"
 
 //Récupération des informations dans les fichiers md: 
 const allPosts = await Astro.glob('./posts/destination/*.md'); 
+
 ---
 <BaseLayout>
+	
 	{
 	allPosts.map((post) =>
-	<div class="flex">
+	<div class="flex items-center lg:justify-around flex-col lg:mx-36 ">
 	<DestinationContainer
 		planet={post.frontmatter.planet}
 		text={post.frontmatter.description}
