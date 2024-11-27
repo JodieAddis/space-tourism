@@ -2,10 +2,12 @@
 import CrewContainer from "../components/CrewContainer.astro";
 import BaseLayout from "../layouts/BaseLayout.astro"
 
-const allPosts = await Astro.glob('./posts/crew/*.md'); 
+// const allPosts = await Astro.glob('./posts/crew/*.md'); 
 ---
 <BaseLayout>
-	{
+<section class="flex flex-col items-center lg:mt-20">
+		<!-- <h1 class="text-base lg:text-[34px] uppercase font-Barlow text-center lg:text-left"><span class="font-bold opacity-25 mr-5">02</span>meet your crew</h1> -->
+	<!-- {
 		allPosts.map((post) => 
 	<div>
 		<CrewContainer
@@ -16,5 +18,14 @@ const allPosts = await Astro.glob('./posts/crew/*.md');
 		/>
 	</div>
 )
-	}
+	} -->
+	<div>
+		<CrewContainer
+			name="Douglas Hurley"
+			role="Commander"
+			description= "Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. He launched into space for the third time as commander of Crew Dragon Demo-2."
+			url="../../public/images/crew/image-douglas-hurley.webp"
+		/>
+		</div>
+</section>
 </BaseLayout>
