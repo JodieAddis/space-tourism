@@ -1,6 +1,8 @@
 ---
 import Header from "../components/Header.astro"
 import Footer from "../components/Footer.astro"
+
+const {background} = Astro.props; 
 ---
 <html lang="en">
   <head>
@@ -11,7 +13,7 @@ import Footer from "../components/Footer.astro"
     <title>Space Tourism</title>
     <link rel="stylesheet" href="../../public/style/style.css">
   </head>
-  <body class="m-0 w-full h-full">
+  <body class=`m-0 w-full h-full` style=`background-image: url('${background}')`>
     <Header />
     <!-- slot permet d'insérer du contenu enfant entre les balises d'ouverture et de fermeture de n'importe quel composant astro -->
     <slot />

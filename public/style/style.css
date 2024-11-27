@@ -17,7 +17,7 @@
     @apply h-screen m-0 p-0 overflow-x-hidden;
   }
   body {
-    @apply bg-[url('../images/home/background-home-mobile.jpg')] lg:bg-[url('../images/home/background-home-desktop.jpg')] text-white bg-no-repeat bg-auto;
+    @apply text-white bg-no-repeat bg-auto;
   }
 }
 

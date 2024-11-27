@@ -3,8 +3,10 @@ import CrewContainer from "../components/CrewContainer.astro";
 import BaseLayout from "../layouts/BaseLayout.astro"
 
 // const allPosts = await Astro.glob('./posts/crew/*.md'); 
+
+const desktopBg = "../public/images/crew/background-crew-desktop.jpg"
 ---
-<BaseLayout>
+<BaseLayout background={desktopBg}>
 <section class="flex flex-col items-center lg:mt-20">
 		<!-- <h1 class="text-base lg:text-[34px] uppercase font-Barlow text-center lg:text-left"><span class="font-bold opacity-25 mr-5">02</span>meet your crew</h1> -->
 	<!-- {

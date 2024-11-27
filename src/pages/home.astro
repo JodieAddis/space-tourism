@@ -3,9 +3,11 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 const home = await Astro.glob('./posts/home.md'); 
 const homePost = home[0]; 
 
+const desktopBg = "../public/images/home/background-home-desktop.jpg"
+
 ---
 
-<BaseLayout>
+<BaseLayout background={desktopBg}>
 	<main class="h-screen flex flex-col lg:flex-row justify-around items-center  mt-6 lg:mt-0">
 	<div class="lg:w-[450px]">
 		<h1 class="uppercase text-base lg:text-3xl font-Barlow text-center">so, you want to travel to</h1>
