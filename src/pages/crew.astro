@@ -1,6 +1,20 @@
 ---
+import CrewContainer from "../components/CrewContainer.astro";
 import BaseLayout from "../layouts/BaseLayout.astro"
+
+const allPosts = await Astro.glob('./posts/crew/*.md'); 
 ---
 <BaseLayout>
-	<h2>CREW</h2>
+	{
+		allPosts.map((post) => 
+	<div>
+		<CrewContainer
+			role={post.frontmatter.role}
+			name={post.frontmatter.name}
+			description={post.frontmatter.bio}
+			url={post.frontmatter.images}
+		/>
+	</div>
+)
+	}
 </BaseLayout>
