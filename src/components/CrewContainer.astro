@@ -1,34 +1,15 @@
 ---
-const { role, name, description, url } = Astro.props;
+const { role, name, description, url, flexContainer, orderText, orderTab} = Astro.props;
 ---
-<!-- <section class="flex flex-col lg:flex-row lg:items-center gap-8 lg:h-full">
-    <div class=" lg:flex lg:flex-col lg:justify-between">
-        <h1 class="text-base lg:text-[34px] uppercase font-Barlow text-center lg:text-left"><span class="font-bold opacity-25 mr-5">02</span>meet your crew</h1>
-        <div class="order-2 lg:order-1 text-center lg:text-left lg:mr-16">
-
-            <h2 class="text-base lg:text-3xl uppercase font-Bellefair opacity-50 mt-8 lg:mt-0">{role}</h2>
-            <h3 class="text-2xl lg:text-[56px] uppercase font-Bellefair mt-3 lg:mt-8">{name}</h3>
-            <p class="text-base lg:text-lg font-Barlow mt-6 lg:mt-12 mx-3 lg:mx-0 lg:w-[444px]">{description}</p>
-        </div>
-    </div>
-  <div class="order-1 lg:order-2 flex flex-col items-center mt-10">
-    <img src={url} alt="{name}" class="w-1/2 lg:w-full lg:max-w-md lg:h-auto">
-    <hr  class="bg-white h-[1px] w-5/6 opacity-50 lg:hidden"/>
-  </div>
-</section> -->
-
-  <div id="container" class="flex flex-col lg:flex-row gap-8 lg:h-full mt-8 lg:mt-0">
-    <div id="info-container" class="order-2 lg:order-1 flex flex-col items-center lg:items-start lg:justify-center">
-      <div id="info-container-text" class="text-center lg:text-left text-crew-tech">
+  <div id="container" class="flex flex-col lg:flex-row gap-8 lg:w-full lg:h-full mt-8 lg:mt-0">
+    <div id="info-container" class=`order-2 lg:order-1 flex items-center lg:items-start lg:justify-center ${flexContainer}`>
+      <div id="info-container-text" class=`text-center lg:text-left ${orderText}`>
         <h2 class="text-base lg:text-3xl uppercase font-Bellefair opacity-50 mt-8 lg:mt-0">{role}</h2>
-        <h3 class="text-2xl lg:text-[56px] uppercase font-Bellefair mt-3 lg:mt-8">{name}</h3>
+        <h3 class="text-2xl lg:text-5xl uppercase font-Bellefair mt-3 lg:mt-8">{name}</h3>
         <p class="text-base lg:text-lg font-Barlow mt-6 lg:mt-12 mx-3 lg:mx-0 lg:w-[444px]">{description}</p>
       </div>
-      <div id="info-container-tab" class="order-1 lg:order-2 w-full flex justify-center lg:justify-start lg:mt-36">
-        <span class="crew-tab"></span>
-        <span class="crew-tab"></span>
-        <span class="crew-tab"></span>
-        <span class="crew-tab"></span>
+      <div id="info-container-tab" class=` w-full flex justify-center lg:justify-start mt-8 lg:mt-36 ${orderTab}`>
+        <slot name="tab"></slot> <!--slot pour intégrer les différents onglets -->
       </div>
     </div>
     <div id="image-container" class="flex flex-col items-center order-1 lg:order-2">

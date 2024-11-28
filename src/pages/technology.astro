@@ -7,18 +7,38 @@ const allPosts = await Astro.glob('./posts/technology/*.md');
 const desktopBg = "../public/images/technology/background-technology-desktop.jpg"
 ---
 <BaseLayout background={desktopBg}>
-	<CrewContainer
-	name="Launch vehicle"
-	description="A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!"
-	url="../public/images/technology/image-launch-vehicle-portrait.jpg"
-	/>
-	<!-- {
-		allPosts.map((post) =>
-		<CrewContainer
-			name={post.frontmatter.name}
-			description={post.frontmatter.bio}
-			url={post.frontmatter.images}
-	/>
-	)
-	} -->
+	<section class="flex flex-col items-center lg:mt-20">
+		<section class="flex flex-col">
+			<h1 class="text-base lg:text-[34px] uppercase font-Barlow text-center lg:text-left"><span class="font-bold opacity-25 mr-5">03</span>space launch 101</h1>
+				<CrewContainer
+				role="the terminology ..."
+				name="Launch vehicle"
+				description="A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!"
+				url="../public/images/technology/image-launch-vehicle-portrait.jpg"
+				flexContainer="tech-info-container"
+				orderText="tech-container-text"
+				orderTab="tech-container-tab"
+				>
+					<span slot="tab" class="tech-tab">
+						<a href="/technology/launch">1</a>
+					</span>
+					<span slot="tab" class="tech-tab">
+						<a href="/technology/spaceport">2</a>
+					</span>
+					<span slot="tab" class="tech-tab">
+						<a href="/technology/spacecapsule">3</a>
+					</span>
+				</CrewContainer>
+			<!-- {
+				allPosts.map((post) =>
+				<CrewContainer
+					name={post.frontmatter.name}
+					description={post.frontmatter.bio}
+					url={post.frontmatter.images}
+			/>
+			)
+			} -->
+		</section>
+	</section>
+
 </BaseLayout>
