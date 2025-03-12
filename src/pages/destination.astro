@@ -1,40 +1,14 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import DestinationContainer from "../components/DestinationContainer.astro"
-import TabDesktop from "../components/TabDesktop.tsx"
-
-//Récupération des informations dans les fichiers md: 
-const allPosts = await Astro.glob('./posts/destination/*.md'); 
-const desktopBg = "../public/images/destination/background-destination-desktop.jpg"
-
-
+import DestinationContainer from "../components/DestinationContainer";
+const desktopBg = "../public/images/destination/background-destination-desktop.jpg";
 ---
+
 <BaseLayout background={desktopBg}>
-	
-	<!-- {
-	allPosts.map((post) =>
-	<div class="flex items-center lg:justify-around flex-col lg:flex-row lg:mx-36 ">
-	<DestinationContainer
-		planet={post.frontmatter.planet}
-		text={post.frontmatter.description}
-		destText={post.frontmatter.distanceText}
-		destNum={post.frontmatter.distanceNum}
-		timeText={post.frontmatter.timeText}
-		timeNum={post.frontmatter.timeNum}
-		/>
-	</div>
-	)
-	} -->
-
-	<div class="flex items-center lg:justify-between flex-col lg:flex-row lg:mx-36 ">
-	<DestinationContainer
-		planet="moon"
-		text="See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites."
-		destText="avg. distance"
-		destNum="384,400 km"
-		timeText="est.travel time"
-		timeNum="3 days"
-		/>
-	</div>
-
+  <div class="flex items-center lg:justify-around flex-col lg:flex-row lg:mx-36">
+    <DestinationContainer client:load/>
+  </div>
 </BaseLayout>
+
+<script>
+</script>
