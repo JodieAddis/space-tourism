@@ -1,5 +1,5 @@
 ---
-import CrewContainer from "../components/CrewContainer.astro";
+import CrewContainer from "../components/CrewContainer";
 import BaseLayout from "../layouts/BaseLayout.astro"
 
 // const allPosts = await Astro.glob('./posts/crew/*.md'); 
@@ -8,34 +8,10 @@ const desktopBg = "../public/images/crew/background-crew-desktop.jpg"
 ---
 <BaseLayout background={desktopBg}>
 	<section class="flex flex-col items-center lg:mt-20">
-		<!-- {
-			allPosts.map((post) => 
-		<div>
-			<CrewContainer
-				role={post.frontmatter.role}
-				name={post.frontmatter.name}
-				description={post.frontmatter.bio}
-				url={post.frontmatter.images}
-			/>
-		</div>
-	)
-		} -->
 		<section class="flex flex-col">
 			<h1 class="text-base lg:text-[34px] uppercase font-Barlow text-center lg:text-left"><span class="font-bold opacity-25 mr-5">02</span>meet your crew</h1>
-			<CrewContainer
-			name="Douglas Hurley"
-			role="Commander"
-			description= "Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. He launched into space for the third time as commander of Crew Dragon Demo-2."
-			url="../../public/images/crew/image-douglas-hurley.webp"
-			flexContainer="crew-info-container"
-			orderText="crew-container-text"
-			orderTab="crew-container-tab"
-			>
-				<span slot="tab" class="crew-tab"></span>
-				<span slot="tab" class="crew-tab"></span>
-				<span slot="tab" class="crew-tab"></span>
-				<span slot="tab" class="crew-tab"></span>
-			</CrewContainer>
+			<CrewContainer client:load />
+
 		</section>
 	</section>
 </BaseLayout>
