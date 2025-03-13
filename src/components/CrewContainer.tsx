@@ -25,17 +25,15 @@ const CrewContainer = () => {
       {selectedTab === selectedPeople.name && (
         <div
           id="container"
-          className="flex flex-col lg:flex-row gap-8 lg:w-full lg:h-full mt-8 lg:mt-0"
+          className="flex flex-col lg:flex-row gap-8 mt-8 lg:mt-0"
         >
-          <div
-            id="info-container"
-            className={`order-2 lg:order-1 flex items-center lg:items-start lg:justify-center`}
-          >
-            <div
-              id="info-container-text"
-              className={`text-center lg:text-left`}
-            >
-              <h2 className="text-base lg:text-3xl uppercase font-Bellefair opacity-50 mt-8 lg:mt-0">
+          <div id="info-container" className={`order-2 lg:order-1`}>
+            <div id="info-container-text" className="">
+              <h1 className="text-base lg:text-[34px] uppercase font-Barlow text-center lg:text-left">
+                <span className="font-bold opacity-25 mr-5">02</span>meet your
+                crew
+              </h1>
+              <h2 className="text-base lg:text-3xl uppercase font-Bellefair opacity-50 mt-44">
                 {selectedPeople.role}
               </h2>
               <h3 className="text-2xl lg:text-5xl uppercase font-Bellefair mt-3 lg:mt-8">
@@ -44,31 +42,28 @@ const CrewContainer = () => {
               <p className="text-base lg:text-lg font-Barlow mt-6 lg:mt-12 mx-3 lg:mx-0 lg:w-[444px]">
                 {selectedPeople.bio}
               </p>
-            </div>
-            <div
-              id="info-container-tab"
-              className={` w-full flex justify-center lg:justify-start mt-8 lg:mt-36`}
-            >
-              <button
-                data-crew="Douglas Hurley"
-                className="crew-tab"
-                onClick={handleClick}
-              ></button>
-              <button
-                data-crew="Mark Shuttleworth"
-                className="crew-tab"
-                onClick={handleClick}
-              ></button>
-              <button
-                data-crew="Victor Glover"
-                className="crew-tab"
-                onClick={handleClick}
-              ></button>
-              <button
-                data-crew="Anousheh Ansari"
-                className="crew-tab"
-                onClick={handleClick}
-              ></button>
+              <div className="flex flex-row mt-24">
+                <button
+                  data-crew="Douglas Hurley"
+                  className="crew-tab"
+                  onClick={handleClick}
+                ></button>
+                <button
+                  data-crew="Mark Shuttleworth"
+                  className="crew-tab"
+                  onClick={handleClick}
+                ></button>
+                <button
+                  data-crew="Victor Glover"
+                  className="crew-tab"
+                  onClick={handleClick}
+                ></button>
+                <button
+                  data-crew="Anousheh Ansari"
+                  className="crew-tab"
+                  onClick={handleClick}
+                ></button>
+              </div>
             </div>
           </div>
           <div
@@ -78,7 +73,7 @@ const CrewContainer = () => {
             <img
               src={selectedPeople.images}
               alt={`Picture of ${selectedPeople.name}`}
-              className="w-1/2 lg:w-full lg:max-w-md lg:h-auto"
+              className=" "
             />
             <hr className="bg-white h-[1px] w-5/6 opacity-50 lg:hidden" />
           </div>

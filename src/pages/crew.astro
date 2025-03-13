@@ -7,11 +7,9 @@ import BaseLayout from "../layouts/BaseLayout.astro"
 const desktopBg = "../public/images/crew/background-crew-desktop.jpg"
 ---
 <BaseLayout background={desktopBg}>
-	<section class="flex flex-col items-center lg:mt-20">
-		<section class="flex flex-col">
-			<h1 class="text-base lg:text-[34px] uppercase font-Barlow text-center lg:text-left"><span class="font-bold opacity-25 mr-5">02</span>meet your crew</h1>
+	<section class="flex flex-col justify-center items-center">
+		<div class="flex items-center lg:pt-8 ">
 			<CrewContainer client:load />
-
-		</section>
+		</div>
 	</section>
 </BaseLayout>
