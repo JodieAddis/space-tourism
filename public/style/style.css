@@ -28,16 +28,30 @@
 .nav-link-desktop {
   @apply font-Barlow text-base mx-6 py-10;
 }
+.nav-link-desktop:hover {
+  @apply border-b-white border-b-4 border-opacity-50;
+}
 .nav-link-desktop.active {
   @apply border-b-white border-b-4;
+}
+
+/*Home Page*/
+.circle-hover {
+  @apply shadow-none;
+}
+.circle-hover:hover {
+  @apply shadow-[0_0_0_70px_rgba(255,255,255,0.1)] cursor-pointer;
 }
 
 /*Destination Page*/
 .destination-tab {
   @apply m-5 font-Barlow uppercase text-base pb-2;
 }
+.destination-tab:hover {
+  @apply border-b-white border-b-2 border-solid border-opacity-50;
+}
 .destination-tab.active {
-  @apply border-b-white border-b-2;
+  @apply border-b-white border-b-2 border-solid border-opacity-100;
 }
 
 /* Crew Page */
@@ -51,7 +65,7 @@
   @apply order-1 lg:order-2;
 }
 .crew-tab {
-  @apply bg-white opacity-40 w-2.5 lg:w-4 h-2.5 lg:h-4 rounded-full mr-4;
+  @apply bg-white opacity-20 hover:opacity-50 w-2.5 lg:w-4 h-2.5 lg:h-4 rounded-full mr-4;
 }
 .crew-tab.active {
   @apply opacity-100;
@@ -59,7 +73,7 @@
 
 /* Tech page */
 .tab-tech {
-  @apply h-[80px] w-[80px] text-3xl font-Bellefair border-white border-solid border-2 rounded-full;
+  @apply w-[40px] h-[40px] lg:h-[80px] lg:w-[80px] text-base lg:text-3xl font-Bellefair border-white border-solid border-[1px] border-opacity-30 hover:border-opacity-100 lg:border-2 rounded-full;
 }
 .tab-tech.active {
   @apply bg-white text-black;

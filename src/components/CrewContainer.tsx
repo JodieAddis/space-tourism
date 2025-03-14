@@ -25,8 +25,8 @@ const CrewContainer = () => {
       {selectedTab === selectedPeople.name && (
         <div className="w-full flex flex-col lg:flex-row lg:items-center lg:justify-between lg:px-32 gap-8 mt-8 lg:mt-6">
           <div className={`order-2 lg:order-1`}>
-            <div className="">
-              <h2 className="text-base lg:text-3xl uppercase font-Bellefair opacity-50 mt-44 lg:mt-0">
+            <div className="text-center lg:text-left">
+              <h2 className="text-base lg:text-3xl uppercase font-Bellefair opacity-50 lg:mt-0">
                 {selectedPeople.role}
               </h2>
               <h3 className="text-2xl lg:text-5xl uppercase font-Bellefair mt-3 lg:mt-8">
@@ -70,9 +70,9 @@ const CrewContainer = () => {
             <img
               src={selectedPeople.images}
               alt={`Picture of ${selectedPeople.name}`}
-              className="h-[650px]"
+              className=" h-[225px] lg:h-[650px]"
             />
-            <hr className="bg-white h-[1px] w-5/6 opacity-50 lg:hidden" />
+            <hr className="bg-white h-[1px] w-5/6 opacity-30 lg:hidden" />
           </div>
         </div>
       )}

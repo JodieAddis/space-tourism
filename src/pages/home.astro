@@ -8,13 +8,13 @@ const desktopBg = "../public/images/home/background-home-desktop.jpg"
 ---
 
 <BaseLayout background={desktopBg}>
-	<main class="h-screen flex flex-col lg:flex-row justify-around items-center  mt-6 lg:mt-0">
-	<div class="lg:w-[450px]">
+	<main class="w-full h-full flex flex-col lg:flex-row lg:justify-around items-center  mt-6 lg:mt-0">
+	<div class="lg:w-[450px] flex flex-col">
 		<h1 class="uppercase text-base lg:text-3xl font-Barlow text-center">so, you want to travel to</h1>
 		<h2 class="mt-8 uppercase text-8xl lg:text-[150px] font-Bellefair text-center lg:text-left">space</h2>
 		<p class="font-sm lg:font-lg font-Barlow mt-8 text-center lg:text-left mx-4">{homePost.frontmatter.description}</p>
 	</div>
-		<div class=" flex justify-center items-center text-black bg-white w-40 lg:w-[274px] h-40 lg:h-[274px] rounded-full uppercase mt-20 circle-hover">
+		<div class=" flex justify-center items-center text-black bg-white w-40 lg:w-[274px] h-40 lg:h-[274px] rounded-full uppercase mt-16 lg:mt-0 circle-hover transition-all duration-500 ease-in-out">
 			<p class="font-Bellefair text-xl lg:text-3xl">explore</p>
 		</div>
 	</main>

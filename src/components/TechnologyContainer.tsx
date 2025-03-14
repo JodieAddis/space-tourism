@@ -22,9 +22,9 @@ const TechnologyContainer = () => {
     <>
       {selectedTab === selectedTech?.name && (
         <>
-          <div className="flex flex-row lg:items-center lg:justify-between lg:pl-32">
-            <div className="flex lg:flex-row lg:h-[300px]">
-              <div className="flex flex-col justify-around mr-12">
+          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between lg:pl-32">
+            <div className="flex flex-col lg:flex-row lg:h-[300px]">
+              <div className="flex justify-around lg:flex-col lg:mr-12">
                 <button
                   className={`tab-tech ${selectedTab === "launch vehicle" ? "active" : ""}
                   `}
@@ -50,14 +50,14 @@ const TechnologyContainer = () => {
                   3
                 </button>
               </div>
-              <div>
-                <h2 className="uppercase text-base font-Barlow">
+              <div className="text-center lg:text-left">
+                <h2 className="uppercase text-sm lg:text-base font-Barlow">
                   the technology..
                 </h2>
-                <h3 className="uppercase font-Bellefair text-[56px] font-normal mt-2">
+                <h3 className="uppercase font-Bellefair text-2xl lg:text-[56px] font-normal mt-2">
                   {selectedTech.name}
                 </h3>
-                <p className="w-[444px] text-lg font-Barlow mt-5">
+                <p className="w-[444px] text-base lg:text-lg font-Barlow mt-5">
                   {selectedTech.description}
                 </p>
               </div>
