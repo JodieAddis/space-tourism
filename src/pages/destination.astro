@@ -5,7 +5,13 @@ const desktopBg = "../public/images/destination/background-destination-desktop.j
 ---
 
 <BaseLayout background={desktopBg}>
-  <div class="flex items-center lg:justify-around flex-col lg:flex-row lg:mx-36">
+  <div class="flex items-center lg:justify-around flex-col lg:flex-col">
+    <h1 class="uppercase font-Barlow lg:text-[34px] text-center lg:self-start lg:pl-32 lg:pt-16">
+      <span class="text-white text-opacity-25 font-bold text-center mr-3">
+        01
+      </span>
+      pick your destination
+    </h1>
     <DestinationContainer client:load/>
   </div>
 </BaseLayout>

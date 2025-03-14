@@ -26,21 +26,24 @@ const TechnologyContainer = () => {
             <div className="flex lg:flex-row lg:h-[300px]">
               <div className="flex flex-col justify-around mr-12">
                 <button
-                  className="tab-tech"
+                  className={`tab-tech ${selectedTab === "launch vehicle" ? "active" : ""}
+                  `}
                   data-tech="launch vehicle"
                   onClick={handleClick}
                 >
                   1
                 </button>
                 <button
-                  className="tab-tech"
+                  className={`tab-tech ${selectedTab === "space capsule" ? "active" : ""}
+                  `}
                   data-tech="space capsule"
                   onClick={handleClick}
                 >
                   2
                 </button>
                 <button
-                  className="tab-tech"
+                  className={`tab-tech ${selectedTab === "spaceport" ? "active" : ""}
+                  `}
                   data-tech="spaceport"
                   onClick={handleClick}
                 >

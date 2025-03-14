@@ -1,9 +1,10 @@
 export interface ViewProps {
   css: string;
+  selectedTab: string;
   onViewSelect: (tab: string) => void;
 }
 
-const Component = ({ css, onViewSelect }: ViewProps) => {
+const Component = ({ css, selectedTab, onViewSelect }: ViewProps) => {
   const tabs = ["moon", "mars", "europa", "titan"];
 
   return (
@@ -11,7 +12,7 @@ const Component = ({ css, onViewSelect }: ViewProps) => {
       {tabs.map((tab, index) => (
         <div key={index} className="tab">
           <button
-            className={css}
+            className={`${css} ${selectedTab === tab ? "active" : ""}`}
             onClick={() => {
               onViewSelect(tab);
             }}
