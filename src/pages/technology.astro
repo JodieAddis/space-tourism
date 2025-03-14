@@ -1,11 +1,13 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import TechnologyContainer from "../components/TechnologyContainer";
 const desktopBg = "../public/images/technology/background-technology-desktop.jpg"
 ---
 <BaseLayout background={desktopBg}>
 	<section class="flex flex-col items-center lg:mt-20">
-		<section class="flex flex-col">
-			<h1 class="text-base lg:text-[34px] uppercase font-Barlow text-center lg:text-left"><span class="font-bold opacity-25 mr-5">03</span>space launch 101</h1>
+		<section class="flex flex-col w-full">
+			<h1 class="text-base lg:text-[34px] uppercase font-Barlow text-center lg:text-left"><span class="font-bold opacity-25 mr-5 lg:pl-32">03</span>space launch 101</h1>
+			<TechnologyContainer client:load />
 		</section>
 	</section>
 

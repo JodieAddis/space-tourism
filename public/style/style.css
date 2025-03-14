@@ -47,15 +47,6 @@
 }
 
 /* Tech page */
-.tech-info-container {
-  @apply flex-col lg:flex-row;
-}
-.tech-container-text {
-  @apply order-1 lg:order-2 lg:flex lg:flex-col lg:h-full;
-}
-.tech-container-tab {
-  @apply order-2 lg:order-1 flex lg:flex-col mr-10;
-}
-.tech-tab {
-  @apply text-white font-Bellefair text-base lg:text-3xl w-10 lg:w-20 h-10 lg:h-20 rounded-full border-white border-solid border-[1px] flex justify-center items-center mx-3 lg:mx-0 lg:my-3;
+.tab-tech {
+  @apply h-[80px] w-[80px] text-3xl font-Bellefair border-white border-solid border-2 rounded-full;
 }
