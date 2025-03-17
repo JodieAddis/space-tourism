@@ -1,6 +1,18 @@
 ---
+import Icons from "./Icons/Icons";
+
 
 ---
-<footer>
-    <p>Coded with Astro by Jodie Addis</p>
+<footer class="w-full bg-opacity-5 backdrop-blur font-Bellefair text-center flex justify-center items-center border-t-2 border-solid border-t-white border-opacity-5">
+    <div class="flex flex-col lg:flex-row justify-center items-center py-5">
+        <p>Coded by Jodie Addis with AstroJs</p>
+        <span class="text-white hidden lg:block text-lg mx-3">●</span>
+        <div class="flex flex-row mt-5 lg:mt-0">
+            <a href="https://github.com/JodieAddis"
+            target="_blank"
+            class="pr-3"><Icons name="github" /></a>
+            <a href="https://www.linkedin.com/in/jodieaddis/" target="_blank"><Icons name="linkedin" /></a>
+        </div>
+
+    </div>
 </footer>

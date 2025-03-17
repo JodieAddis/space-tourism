@@ -54,7 +54,7 @@ const TechnologyContainer = () => {
                 <h2 className="uppercase text-sm lg:text-base font-Barlow">
                   the technology..
                 </h2>
-                <h3 className="uppercase font-Bellefair text-2xl lg:text-[56px] font-normal mt-2">
+                <h3 className="uppercase font-Bellefair text-2xl lg:text-[56px] font-normal mt-5">
                   {selectedTech.name}
                 </h3>
                 <p className="w-[444px] text-base lg:text-lg font-Barlow mt-5">

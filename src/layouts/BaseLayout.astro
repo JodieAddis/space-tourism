@@ -1,9 +1,9 @@
 ---
-import Header from "../components/Header.astro"
-import Footer from "../components/Footer.astro"
-
-const {background} = Astro.props; 
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+const { backgroundMobile, backgroundDesktop } = Astro.props;
 ---
+
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -13,10 +13,36 @@ const {background} = Astro.props;
     <title>Space Tourism</title>
     <link rel="stylesheet" href="../../public/style/style.css">
   </head>
-  <body class=`m-0 w-full h-full` style=`background-image: url('${background}')`>
+  <body
+    class="m-0 w-full h-full flex flex-col"
+    style={`background-image: url('${backgroundMobile}');`} 
+  >
     <Header />
-    <!-- slot permet d'insérer du contenu enfant entre les balises d'ouverture et de fermeture de n'importe quel composant astro -->
-    <slot />
-    <!-- <Footer /> -->
+    <main class="flex-1 mb-6">
+      <slot />
+    </main>
+    <Footer />
   </body>
 </html>
+
+<script>
+  // Fonction pour mettre à jour le background selon la taille de l'écran
+  const updateBackground = () => {
+    const screenWidth = window.innerWidth;
+    
+    // Si la largeur de l'écran est inférieure à 728px, on utilise le background mobile
+    const bgMobile = "{backgroundMobile}";  // Récupère la prop de fond mobile
+    const bgDesktop = "{backgroundDesktop}";  // Récupère la prop de fond desktop
+
+    const newBg = screenWidth < 728 ? bgMobile : bgDesktop; // Choisir le background
+
+    // Appliquer le fond choisi
+    document.body.style.backgroundImage = `url('${newBg}')`;
+  };
+
+  // Initialiser le changement de background dès le chargement de la page
+  window.addEventListener('load', updateBackground);
+
+  // Mettre à jour l'arrière-plan au redimensionnement de l'écran
+  window.addEventListener('resize', updateBackground);
+</script>
