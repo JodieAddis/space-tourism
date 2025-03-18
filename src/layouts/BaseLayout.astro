@@ -14,8 +14,10 @@ const { backgroundMobile, backgroundDesktop } = Astro.props;
     <link rel="stylesheet" href="../../public/style/style.css">
   </head>
   <body
-    class="m-0 w-full h-full flex flex-col"
-    style={`background-image: url('${backgroundMobile}');`} 
+    class="m-0 w-full h-full flex flex-col bg-cover"
+    data-backgroundMobile ={backgroundMobile}
+    data-backgroundDesktop = {backgroundDesktop}
+    id="body"
   >
     <Header />
     <main class="flex-1 mb-6">
@@ -26,23 +28,20 @@ const { backgroundMobile, backgroundDesktop } = Astro.props;
 </html>
 
 <script>
-  // Fonction pour mettre à jour le background selon la taille de l'écran
   const updateBackground = () => {
-    const screenWidth = window.innerWidth;
-    
-    // Si la largeur de l'écran est inférieure à 728px, on utilise le background mobile
-    const bgMobile = "{backgroundMobile}";  // Récupère la prop de fond mobile
-    const bgDesktop = "{backgroundDesktop}";  // Récupère la prop de fond desktop
+    const body = document.getElementById("body");
+    const screenWidth = window.innerWidth ; 
+    if(body){
+      const bgMobile = body.getAttribute("data-backgroundMobile"); 
+      const bgDesktop = body.getAttribute("data-backgroundDesktop"); 
 
-    const newBg = screenWidth < 728 ? bgMobile : bgDesktop; // Choisir le background
+      const newBg = screenWidth < 728 ? bgMobile : bgDesktop; 
 
-    // Appliquer le fond choisi
-    document.body.style.backgroundImage = `url('${newBg}')`;
-  };
+      body.style.backgroundImage= `url(${newBg})`; 
+    }
+  }
+  window.addEventListener("load", updateBackground); 
+  window.addEventListener("resize", updateBackground); 
 
-  // Initialiser le changement de background dès le chargement de la page
-  window.addEventListener('load', updateBackground);
-
-  // Mettre à jour l'arrière-plan au redimensionnement de l'écran
-  window.addEventListener('resize', updateBackground);
+  
 </script>

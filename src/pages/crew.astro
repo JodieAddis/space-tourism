@@ -2,11 +2,10 @@
 import CrewContainer from "../components/CrewContainer";
 import BaseLayout from "../layouts/BaseLayout.astro"
 
-// const allPosts = await Astro.glob('./posts/crew/*.md'); 
-
-const desktopBg = "../public/images/crew/background-crew-desktop.jpg"
+const mobileBg = "/images/crew/background-crew-mobile.jpg";
+const desktopBg = "/images/crew/background-crew-desktop.jpg";
 ---
-<BaseLayout background={desktopBg}>
+<BaseLayout backgroundMobile={mobileBg} backgroundDesktop={desktopBg}>
 	<section class="flex flex-col justify-center items-center">
 		<div class="flex flex-col items-center lg:pt-20 ">
 			<h1 class="text-base lg:text-[34px] uppercase font-Barlow text-center lg:self-start lg:text-left lg:pl-32">

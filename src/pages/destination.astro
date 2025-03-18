@@ -1,10 +1,11 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import DestinationContainer from "../components/DestinationContainer";
-const desktopBg = "../public/images/destination/background-destination-desktop.jpg";
+const mobileBg = "/images/destination/background-destination-mobile.jpg";
+const desktopBg = "/images/destination/background-destination-desktop.jpg";
 ---
 
-<BaseLayout background={desktopBg}>
+<BaseLayout backgroundMobile={mobileBg} backgroundDesktop={desktopBg}>
   <div class="flex items-center lg:justify-around flex-col lg:flex-col">
     <h1 class="uppercase font-Barlow lg:text-[34px] text-center lg:self-start lg:pl-32 lg:pt-16">
       <span class="text-white text-opacity-25 font-bold text-center mr-3">
