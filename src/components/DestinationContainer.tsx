@@ -9,7 +9,6 @@ const DestinationContainer = () => {
   const handleViewSelect = (tab: string) => {
     setSelectedTab(tab);
   };
-
   // Trouver les données de la planète sélectionnée
   const selectedPlanet = planetDestination.find(
     (planet) => planet.planet === selectedTab
@@ -22,23 +21,23 @@ const DestinationContainer = () => {
     <>
       {/* Si l'onglet sélectionné correspond à la planète, on affiche le contenu */}
       {selectedTab === selectedPlanet.planet && (
-        <div className="w-full flex lg:flex-row lg:justify-evenly">
-          <div className="mt-16 flex lg:items-center lg:ml-8">
+        <div className="w-full flex flex-col lg:flex-row lg:justify-evenly">
+          <div className="lg:mt-16 flex justify-center lg:items-center lg:ml-8">
             <img
               src={`../../public/images/destination/image-${selectedPlanet.planet}.webp`}
               alt={`Picture of the planet ${selectedPlanet.planet}`}
-              className="w-[170px] lg:w-[445px] mt-10 lg:mt-0"
+              className=" w-[170px] lg:w-[445px] mt-10 lg:mt-0"
             />
           </div>
-          <div className="w-[445px] flex lg:flex-col lg:items-center">
-            <div className="tab-content flex flex-row justify-center mt-6 lg:mt-0">
+          <div className="lg:w-[445px] flex flex-col items-center">
+            <div className="tab-content flex flex-row justify-center lg:self-start mt-6 lg:mt-0">
               <TabDestination
                 onViewSelect={handleViewSelect}
                 css="destination-tab"
                 selectedTab={selectedTab}
               />
             </div>
-            <div className="mx-5 lg:mx-0 lg:mt-6">
+            <div className="lg:mt-6">
               <h2 className="font-Bellefair uppercase text-6xl lg:text-[100px] text-center lg:text-left">
                 {selectedPlanet.planet}
               </h2>
@@ -46,7 +45,7 @@ const DestinationContainer = () => {
                 {selectedPlanet.description}
               </p>
             </div>
-            <hr className="bg-white opacity-50 mt-8 lg:h-2 lg:mt-12 mx-14 lg:mx-0" />
+            <hr className="bg-white lg:opacity-50 mt-8 lg:h-2 lg:mt-12 lg:mx-0" />
             <div className="flex flex-col items-center lg:flex-row lg:self-start mt-8 lg:mt-8">
               <div className="text-center lg:text-left uppercase lg:mr-10">
                 <p className="font-Barlow text-sm">

@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import {homeData} from "../data/home"; 
+
 const mobileBg = "/images/home/background-home-mobile.jpg";
 const desktopBg = "/images/home/background-home-desktop.jpg";
 ---
@@ -12,8 +13,7 @@ const desktopBg = "/images/home/background-home-desktop.jpg";
 		<h2 class="mt-8 uppercase text-8xl lg:text-[150px] font-Bellefair text-center lg:text-left">space</h2>
 		<p class="font-sm lg:font-lg font-Barlow mt-8 text-center lg:text-left mx-4">{homeData}</p>
 	</div>
-		<div class=" flex justify-center items-center text-black bg-white w-40 lg:w-[274px] h-40 lg:h-[274px] rounded-full uppercase mt-16 lg:mt-0 circle-hover transition-all duration-500 ease-in-out">
-			<a href="/destination" class="font-Bellefair text-xl lg:text-3xl">explore</a>
-		</div>
+	<a href="/destination" class=" flex justify-center items-center text-black bg-white w-40 lg:w-[274px] h-40 lg:h-[274px] rounded-full uppercase mt-16 lg:mt-0 circle-hover transition-all duration-500 ease-in-out">
+		<p class="font-Bellefair text-xl lg:text-3xl">explore</p></a>
 	</main>
 </BaseLayout>

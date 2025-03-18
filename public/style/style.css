@@ -65,7 +65,7 @@
   @apply order-1 lg:order-2;
 }
 .crew-tab {
-  @apply bg-white opacity-20 hover:opacity-50 w-2.5 lg:w-4 h-2.5 lg:h-4 rounded-full mr-4;
+  @apply bg-white opacity-20 hover:opacity-50 w-2.5 lg:w-4 h-2.5 lg:h-4 rounded-full mr-6;
 }
 .crew-tab.active {
   @apply opacity-100;
