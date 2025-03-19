@@ -14,16 +14,17 @@ const { backgroundMobile, backgroundDesktop } = Astro.props;
     <link rel="stylesheet" href="../../public/style/style.css">
   </head>
   <body
-    class="m-0 w-full h-full flex flex-col bg-cover"
+    class="m-0 w-screen h-screen flex flex-col bg-cover"
     data-backgroundMobile ={backgroundMobile}
     data-backgroundDesktop = {backgroundDesktop}
     id="body"
   >
-    <Header />
-    <main class="flex-1">
+    <header class="lg:mb-16 mb-8">
+      <Header />
+    </header>
+    <main class="lg:h-full w-full">
       <slot />
     </main>
-    <Footer />
   </body>
 </html>
 

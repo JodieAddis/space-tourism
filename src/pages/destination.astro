@@ -6,13 +6,13 @@ const desktopBg = "/images/destination/background-destination-desktop.jpg";
 ---
 
 <BaseLayout backgroundMobile={mobileBg} backgroundDesktop={desktopBg}>
-  <div class="flex items-center lg:justify-around flex-col lg:flex-col">
-    <h1 class="uppercase font-Barlow text-base lg:text-[34px] text-center lg:self-start lg:pl-32 lg:pt-16">
+  <section class="flex items-center lg:justify-around flex-col lg:flex-col mb-12">
+    <h1 class="uppercase font-Barlow text-base lg:text-[34px] text-center lg:self-start lg:pl-32">
       <span class="text-white text-opacity-25 font-bold text-center mr-3">
         01
       </span>
       pick your destination
     </h1>
     <DestinationContainer client:load/>
-  </div>
+  </section>
 </BaseLayout>

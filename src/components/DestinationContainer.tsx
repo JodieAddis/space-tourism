@@ -45,8 +45,8 @@ const DestinationContainer = () => {
                 {selectedPlanet.description}
               </p>
             </div>
-            <hr className="bg-white lg:opacity-50 mt-8 lg:h-2 lg:mt-12 lg:mx-0" />
-            <div className="flex flex-col items-center lg:flex-row lg:self-start mt-8 lg:mt-8">
+            <hr className="bg-white lg:opacity-50 mt-8 lg:h-[1px] lg:mt-12 lg:mx-0 lg:w-full w-5/6 " />
+            <div className="flex flex-col items-center lg:flex-row lg:self-start mt-8 mb-12 lg:mb-0">
               <div className="text-center lg:text-left uppercase lg:mr-10">
                 <p className="font-Barlow text-sm">
                   {selectedPlanet.distanceText}

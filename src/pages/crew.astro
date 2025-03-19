@@ -6,12 +6,12 @@ const mobileBg = "/images/crew/background-crew-mobile.jpg";
 const desktopBg = "/images/crew/background-crew-desktop.jpg";
 ---
 <BaseLayout backgroundMobile={mobileBg} backgroundDesktop={desktopBg}>
-	<section class="flex flex-col justify-center items-center">
-		<div class="flex flex-col items-center lg:pt-20 ">
+	<section class="flex flex-col justify-center items-center lg:w-full">
+		<div class="lg:w-full flex flex-col items-center lg:justify-around">
 			<h1 class="text-base lg:text-[34px] uppercase font-Barlow text-center lg:self-start lg:text-left lg:pl-32">
                 <span class="font-bold opacity-25 mr-5">02</span>meet your
                 crew
-              </h1>
+            </h1>
 			<CrewContainer client:load />
 		</div>
 	</section>

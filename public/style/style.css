@@ -26,7 +26,7 @@
   @apply font-Barlow text-base my-5;
 }
 .nav-link-desktop {
-  @apply font-Barlow text-base mx-6 py-10;
+  @apply font-Barlow text-base mx-6 py-10 border-b-white border-b-4 border-opacity-0;
 }
 .nav-link-desktop:hover {
   @apply border-b-white border-b-4 border-opacity-50;

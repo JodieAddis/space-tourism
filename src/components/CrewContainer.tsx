@@ -23,7 +23,7 @@ const CrewContainer = () => {
   return (
     <>
       {selectedTab === selectedPeople.name && (
-        <div className="w-full h-full flex flex-col lg:flex-row lg:items-center lg:justify-between lg:px-32 gap-8 mt-8">
+        <div className="w-full h-full flex flex-col lg:flex-row lg:items-center lg:justify-around gap-8 mt-8 lg:mt-0">
           <div className="order-2 lg:order-1 text-center lg:text-left flex flex-col">
             <div className="order-1 lg:order-3 flex flex-row justify-center lg:justify-start lg:mt-24">
               <button
@@ -66,9 +66,9 @@ const CrewContainer = () => {
             <img
               src={selectedPeople.images}
               alt={`Picture of ${selectedPeople.name}`}
-              className="h-[225px] lg:w-full lg:h-full"
+              className="h-[225px] lg:h-1/5"
             />
-            <hr className="bg-white h-[1px] w-5/6 opacity-30 lg:hidden" />
+            <hr className="bg-white h-[2px] w-5/6 opacity-30 lg:hidden" />
           </div>
         </div>
       )}

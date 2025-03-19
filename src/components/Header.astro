@@ -4,14 +4,14 @@ import NavbarMobile from "./navbar/NavbarMobile.astro"
 import NavbarDesktop from "./navbar/NavbarDesktop.astro"
 ---
 
-<header class="flex flex-row justify-between ">
-    <div class="m-6 ">
+<header class="flex flex-row justify-between lg:items-center ">
+    <div class="ml-6 mt-6 lg:mt-0">
         <Icons icon="logo"/>
     </div>
         <NavbarMobile />
+        <hr class=" hidden lg:block lg:bg-white lg:opacity-25 lg:h-[1px] lg:w-4/6 lg:self-center lg:ml-12"/>
     <div class="hidden lg:block">
         <NavbarDesktop />
     </div>
-    
 </header>
 

@@ -5,11 +5,10 @@ const mobileBg = "/images/technology/background-technology-mobile.jpg";
 const desktopBg = "/images/technology/background-technology-desktop.jpg";
 ---
 <BaseLayout backgroundMobile={mobileBg} backgroundDesktop={desktopBg}>
-	<section class="w-screen flex flex-col items-center lg:mt-20">
-		<section class="flex flex-col w-full">
-			<h1 class="text-base lg:text-[34px] uppercase font-Barlow text-center lg:text-left"><span class="font-bold opacity-25 mr-5 lg:pl-32">03</span>space launch 101</h1>
+	<section class=" flex flex-col items-center lg:h-full lg:flex-grow w-full lg:overflow-hidden lg:mb-12">
+		 <div class="w-full lg:justify-start">
+			<h1 class="text-base lg:text-[34px] uppercase font-Barlow text-center lg:text-left mb-8 lg:mb-0"><span class="font-bold opacity-25 mr-5 lg:pl-32">03</span>space launch 101</h1>
+		 </div>
 			<TechnologyContainer client:load />
-		</section>
 	</section>
-
 </BaseLayout>
