@@ -22,7 +22,7 @@ const DestinationContainer = () => {
         <div className="w-full flex flex-col lg:flex-row lg:justify-evenly">
           <div className="lg:mt-16 flex justify-center lg:items-center lg:ml-8">
             <img
-              src={`../../public/images/destination/image-${selectedPlanet.planet}.webp`}
+              src={`/images/destination/image-${selectedPlanet.planet}.webp`}
               alt={`Picture of the planet ${selectedPlanet.planet}`}
               className=" w-[170px] lg:w-[445px] mt-10 lg:mt-0"
             />
