@@ -1,5 +1,6 @@
 ---
 import Header from "../components/Header.astro";
+import "../style/style.css"; 
 const { backgroundMobile, backgroundDesktop } = Astro.props;
 ---
 
@@ -12,7 +13,6 @@ const { backgroundMobile, backgroundDesktop } = Astro.props;
     <meta name="description" content="Discover Space Tourism 🚀, an immersive space travel website: destinations, crew, and cutting-edge technologies for an unforgettable journey.">
     <meta name="generator" content={Astro.generator} />
     <title>Space Tourism</title>
-    <link rel="stylesheet" href="/space-tourism/style/style.css">
   </head>
   <body
     class="m-0 w-screen h-screen flex flex-col bg-cover"
