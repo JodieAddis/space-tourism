@@ -35,7 +35,7 @@
   @apply border-b-white border-b-4;
 }
 
-/*Home Page*/
+/* Home Page */
 .circle-hover {
   @apply shadow-none;
 }
@@ -43,7 +43,7 @@
   @apply shadow-[0_0_0_70px_rgba(255,255,255,0.1)] cursor-pointer;
 }
 
-/*Destination Page*/
+/* Destination Page */
 .destination-tab {
   @apply m-5 font-Barlow uppercase text-base pb-2;
 }
