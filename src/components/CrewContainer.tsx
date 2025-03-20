@@ -7,7 +7,7 @@ const CrewContainer = () => {
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     const people = e.currentTarget.dataset.crew as string;
     console.log("personne sélectionnée:", people);
-    // les attributs data-* sont en fait récupérés en tant que string | undefined (pas un string strict), donc on doit vérifier le type d'abord
+
     if (typeof people === "string") {
       setSelectedTab(people);
       console.log("Personne sélectionnée:", people);
@@ -23,8 +23,8 @@ const CrewContainer = () => {
   return (
     <>
       {selectedTab === selectedPeople.name && (
-        <div className="w-full h-full flex flex-col lg:flex-row lg:items-center lg:justify-around gap-8 mt-8 lg:mt-0">
-          <div className="order-2 lg:order-1 text-center lg:text-left flex flex-col">
+        <div className="w-full h-full flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8 mt-8 lg:mt-0">
+          <div className="order-2 lg:order-1 text-center lg:text-left flex flex-col lg:ml-32">
             <div className="order-1 lg:order-3 flex flex-row justify-center lg:justify-start lg:mt-24">
               <button
                 data-crew="Douglas Hurley"
@@ -61,7 +61,7 @@ const CrewContainer = () => {
           </div>
           <div
             id="image-container"
-            className="flex flex-col items-center order-1 lg:order-2"
+            className="flex flex-col items-center order-1 lg:order-2 lg:mr-32"
           >
             <img
               src={selectedPeople.images}

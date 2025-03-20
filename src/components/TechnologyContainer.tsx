@@ -27,7 +27,7 @@ const TechnologyContainer = () => {
 
     widthScreen();
     window.addEventListener("resize", widthScreen);
-    // Nettoyage à la sortie du composant
+
     return () => {
       window.removeEventListener("resize", widthScreen);
     };

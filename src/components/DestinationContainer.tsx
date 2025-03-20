@@ -5,11 +5,10 @@ import { planetDestination } from "../data/destination";
 const DestinationContainer = () => {
   const [selectedTab, setSelectedTab] = useState("moon");
 
-  // Fonction pour gérer le changement d'onglet
   const handleViewSelect = (tab: string) => {
     setSelectedTab(tab);
   };
-  // Trouver les données de la planète sélectionnée
+
   const selectedPlanet = planetDestination.find(
     (planet) => planet.planet === selectedTab
   );
@@ -19,7 +18,6 @@ const DestinationContainer = () => {
 
   return (
     <>
-      {/* Si l'onglet sélectionné correspond à la planète, on affiche le contenu */}
       {selectedTab === selectedPlanet.planet && (
         <div className="w-full flex flex-col lg:flex-row lg:justify-evenly">
           <div className="lg:mt-16 flex justify-center lg:items-center lg:ml-8">
