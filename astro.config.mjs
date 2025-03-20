@@ -6,6 +6,6 @@ import react from "@astrojs/react";
 
 export default defineConfig({
   integrations: [tailwind(), react()],
-  site: "https://jodieaddis.github.io/space-tourism",
+  site: "https://jodieaddis.github.io",
   base: "/space-tourism/",
 });
