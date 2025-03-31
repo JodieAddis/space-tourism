@@ -35,7 +35,7 @@ const TechnologyContainer = () => {
   return (
     <>
       {selectedTab === selectedTech?.name && (
-        <div className="w-full lg:h-full flex flex-col lg:flex-row lg:items-center lg:justify-between lg:pl-32">
+        <div className="w-full lg:h-full flex flex-col-reverse lg:flex-row lg:items-center lg:justify-between lg:pl-32">
           <div className="lg:h-full lg:flex lg:flex-row lg:items-center">
             <div className="flex justify-center lg:flex-col lg:justify-around order-2 lg:order-1 lg:mr-12  my-8 lg:my-0 lg:flex-1 lg:flex-grow lg:h-1/2">
               <button
@@ -72,7 +72,7 @@ const TechnologyContainer = () => {
               </p>
             </div>
           </div>
-          <div className="order-1 lg:order-3 h-[527px]">
+          <div className="order-1 lg:order-3 lg:h-[527px]">
             <img
               id="img-tech"
               src={
